@@ -6,7 +6,7 @@ from docx import Document
 from docx.shared import Inches
 
 st.title("БЖБ және ТЖБ талдау диаграммалары")
-st.write(""№19 жалпы білім беретін мектеп" КММ")
+st.write("№19 жалпы білім беретін мектеп" КММ")
 
 csv_text = st.text_area("Excel CSV электрондық кестесін осы жерге қойыңыз", height=200)
 
