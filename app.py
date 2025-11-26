@@ -46,11 +46,11 @@ if csv_text.strip():
             st.error("Не найдены колонки 'качество' или 'успеваемость'.")
             st.stop()
 
-        st.info(f"Колонка качества: **{quality_col}**")
-        st.info(f"Колонка успеваемости: **{success_col}**")
+        st.info(f"Колонка білім сапасы: **{quality_col}**")
+        st.info(f"Колонка үлгерімі: **{success_col}**")
 
         # Типы оценивания
-        assess_types = ["БЖБ 1", "БЖБ 2", "ТЖБ"]
+        assess_types = ["СОР 1", "СОР 2", "СОЧ"]
 
         # Для Word
         document = Document()
@@ -73,12 +73,12 @@ if csv_text.strip():
             fig, ax = plt.subplots(figsize=(8, 4))
             x = range(len(labels))
 
-            ax.bar([p - 0.2 for p in x], q, width=0.4, label="Качество знаний")
-            ax.bar([p + 0.2 for p in x], u, width=0.4, label="Успеваемость")
+            ax.bar([p - 0.2 for p in x], q, width=0.4, label="Біліім сапасы")
+            ax.bar([p + 0.2 for p in x], u, width=0.4, label="Үлгерімі")
 
             ax.set_xticks(x)
             ax.set_xticklabels(labels)
-            ax.set_title(f"{assess}: Качество и Успеваемость")
+            ax.set_title(f"{assess}: Сапа және үлгерім")
             ax.set_ylabel("%")
             ax.legend()
 
