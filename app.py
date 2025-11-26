@@ -37,7 +37,7 @@ if csv_text.strip():
         for col in df.columns:
             col_low = col.lower()
 
-            if "біл" in col_low:
+            if "білім" in col_low:
                 quality_col = col
             if "үлгер" in col_low:
                 success_col = col
@@ -46,8 +46,8 @@ if csv_text.strip():
             st.error("Не найдены колонки 'качество' или 'успеваемость'.")
             st.stop()
 
-        st.info(f"Колонка білім сапасы: **{quality_col}**")
-        st.info(f"Колонка үлгерімі: **{success_col}**")
+        st.info(f"Білім сапасы: **{quality_col}**")
+        st.info(f"Үлгерімі: **{success_col}**")
 
         # Типы оценивания
         assess_types = ["БЖБ 1", "БЖБ 2", "ТЖБ"]
@@ -64,7 +64,7 @@ if csv_text.strip():
             if subset.empty:
                 continue
 
-            st.subheader(f"{assess}: Диаграммы")
+            st.subheader(f"{assess}: Диаграммамалар")
 
             labels = subset["Сынып"]
             q = subset[quality_col]
