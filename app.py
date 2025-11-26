@@ -66,19 +66,19 @@ if csv_text.strip():
 
             st.subheader(f"{assess}: Диаграммы")
 
-            labels = subset["Класс"]
+            labels = subset["Сынып"]
             q = subset[quality_col]
             u = subset[success_col]
 
             fig, ax = plt.subplots(figsize=(8, 4))
             x = range(len(labels))
 
-            ax.bar([p - 0.2 for p in x], q, width=0.4, label="Біліім сапасы")
+            ax.bar([p - 0.2 for p in x], q, width=0.4, label="Білім сапасы")
             ax.bar([p + 0.2 for p in x], u, width=0.4, label="Үлгерімі")
 
             ax.set_xticks(x)
             ax.set_xticklabels(labels)
-            ax.set_title(f"{assess}: Сапа және үлгерім")
+            ax.set_title(f"{assess}: Білім сапасы және үлгерімі")
             ax.set_ylabel("%")
             ax.legend()
 
