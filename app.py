@@ -5,10 +5,10 @@ from io import StringIO, BytesIO
 from docx import Document
 from docx.shared import Inches
 
-st.title("Анализ контрольных работ")
-st.write("Вставьте таблицу (CSV из Excel):")
+st.title("БЖБ ЖӘНЕ ТЖБ ТАЛДАУ ДИАГРАММАЛАРЫ")
+st.write(" 19 ЖАЛПЫ БІЛІМ БЕРЕТІН МЕКТЕП КММ")
 
-csv_text = st.text_area("Вставьте таблицу сюда", height=200)
+csv_text = st.text_area("Excel CSV электрондық кестесін осы жерге жазыңыз", height=200)
 
 if csv_text.strip():
     try:
@@ -27,7 +27,7 @@ if csv_text.strip():
                     .astype(float)
                 )
 
-        st.success("Таблица загружена!")
+        st.success("Кесте жүктелді!")
         st.dataframe(df)
 
         # Ищем колонки автоматически
