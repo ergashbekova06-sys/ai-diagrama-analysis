@@ -50,7 +50,7 @@ if csv_text.strip():
         st.info(f"Колонка үлгерімі: **{success_col}**")
 
         # Типы оценивания
-        assess_types = ["СОР 1", "СОР 2", "СОЧ"]
+        assess_types = ["БЖБ 1", "БЖБ 2", "ТЖБ"]
 
         # Для Word
         document = Document()
