@@ -100,9 +100,9 @@ if csv_text.strip():
         output.seek(0)
 
         st.download_button(
-            "📥 Скачать диаграммы в Word",
+            "📥 Word бағдарламасына диаграммаларды жүктеп алыңыз",
             data=output,
-            file_name="Анализ_контрольных_работ.docx",
+            file_name="БЖБ ЖӘНЕ ТЖБ ТАЛДАУ ДИАГРАММАЛАРЫ.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         )
 
