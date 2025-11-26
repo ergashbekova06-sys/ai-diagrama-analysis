@@ -5,10 +5,10 @@ from io import StringIO, BytesIO
 from docx import Document
 from docx.shared import Inches
 
-st.title("БЖБ және ТЖБ талдау диаграммалары")
-st.write("19 жалпы білім беретін мектеп КММ")
+st.title("Анализ контрольных работ")
+st.write("Вставьте таблицу (CSV из Excel):")
 
-csv_text = st.text_area("Excel CSV электрондық кестесін осы жерге қойыңыз", height=200)
+csv_text = st.text_area("Вставьте таблицу сюда", height=200)
 
 if csv_text.strip():
     try:
@@ -27,7 +27,7 @@ if csv_text.strip():
                     .astype(float)
                 )
 
-        st.success("Кесте жүктелді!")
+        st.success("Таблица загружена!")
         st.dataframe(df)
 
         # Ищем колонки автоматически
@@ -75,13 +75,15 @@ if csv_text.strip():
 
             ax.bar([p - 0.2 for p in x], q, width=0.4, label="Качество знаний")
             ax.bar([p + 0.2 for p in x], u, width=0.4, label="Успеваемость")
-           
-            
+
             ax.set_xticks(x)
             ax.set_xticklabels(labels)
             ax.set_title(f"{assess}: Качество и Успеваемость")
             ax.set_ylabel("%")
             ax.legend()
+
+            st.pyplot(fig)
+
             # Сохраняем в память для Word
             img_buf = BytesIO()
             fig.savefig(img_buf, format="png", dpi=200)
