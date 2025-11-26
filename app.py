@@ -59,7 +59,7 @@ if csv_text.strip():
 
         # ---------------- Диаграммы ----------------
         for assess in assess_types:
-            subset = df[df["Оценивание"].str.contains(assess, case=False, na=False)]
+            subset = df[df["Бағалау"].str.contains(assess, case=False, na=False)]
 
             if subset.empty:
                 continue
