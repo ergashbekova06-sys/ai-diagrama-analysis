@@ -37,9 +37,9 @@ if csv_text.strip():
         for col in df.columns:
             col_low = col.lower()
 
-            if "кач" in col_low:
+            if "біл" in col_low:
                 quality_col = col
-            if "успе" in col_low:
+            if "үлгер" in col_low:
                 success_col = col
 
         if not quality_col or not success_col:
