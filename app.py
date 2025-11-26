@@ -75,6 +75,16 @@ if csv_text.strip():
 
             ax.bar([p - 0.2 for p in x], q, width=0.4, label="Качество знаний")
             ax.bar([p + 0.2 for p in x], u, width=0.4, label="Успеваемость")
+            ax.bar([p - 0.2 for p in x], q, width=0.4, label="Качество знаний")
+ax.bar([p + 0.2 for p in x], u, width=0.4, label="Успеваемость")
+
+# ---- Добавляем проценты над столбиками ----
+for i, value in enumerate(q):
+    ax.text(i - 0.2, value + 1, f"{value}%", ha='center')
+
+for i, value in enumerate(u):
+    ax.text(i + 0.2, value + 1, f"{value}%", ha='center')
+
 
             ax.set_xticks(x)
             ax.set_xticklabels(labels)
