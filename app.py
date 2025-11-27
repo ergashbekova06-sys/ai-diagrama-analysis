@@ -85,7 +85,7 @@ if csv_text.strip():
             if subset.empty:
                 continue
 
-            st.subheader(f"{assess}: Диаграммалар")
+            st.subheader(f"{assess}: Білім сапасы мен үлгерім көрсеткіші")
 
             labels = subset["Сынып"]
             q = subset[quality_col]
