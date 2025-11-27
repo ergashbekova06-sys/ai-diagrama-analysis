@@ -6,9 +6,9 @@ from docx import Document
 from docx.shared import Inches
 
 st.title("БЖБ және ТЖБ жұмыстарының нәтижелерін талдау")
-st.write("Excel-ден алынған CSV мәтін түріндегі кестені енгізіңіз:")
+st.write("19 жалпы білім беретін мектеп КММ")
 
-csv_text = st.text_area("Кестені осында қойыңыз", height=200)
+csv_text = st.text_area("Excel-ден алынған CSV мәтін түріндегі кестені енгізіңіз", height=200)
 
 if csv_text.strip():
     # БАРЛЫҒЫ try БЛОКТЫҢ ІШІНДЕ — ЕШҚАНДАЙ СИНТАКСИС ҚАТЕ БОЛМАЙДЫ
