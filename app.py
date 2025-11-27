@@ -5,7 +5,7 @@ from io import StringIO, BytesIO
 from docx import Document
 from docx.shared import Inches
 
-st.title("Бақылау жұмыстарының нәтижелерін талдау")
+st.title("БЖБ және ТЖБ жұмыстарының нәтижелерін талдау")
 st.write("Excel-ден алынған CSV мәтін түріндегі кестені енгізіңіз:")
 
 csv_text = st.text_area("Кестені осында қойыңыз", height=200)
